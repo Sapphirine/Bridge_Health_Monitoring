@@ -1,0 +1,154 @@
+<O N="Sample: Steel Bridge" T="Project">
+   <P N="Alignment" V="CSAlignment" T="Alignment" />
+   <O N="Internal Parameters" T="Group">
+       <P N="BridgeLength" V="sLng[length(sLng)-1]+((length(sLng)-2)*g_gap)" />
+       <P N="nodeloc" V="refine(makelist(sLng, cLoc), refinement)" />
+   </O>
+   <O N="User Input" T="Group">
+       <O N="Bridge Layout" T="Group">
+           <P N="EndUserInputFields" V="1" />
+           <P N="CSAlignment" V="Straight" T="Alignment" D="Bridge alignment" />
+           <P N="gLoc" V="[117, 3, -111, -225]" D="Transverse location of girders" UT="Length" UC="Geometry" />
+           <P N="sLng" V="[0, 1033]" D="Location of abutments and piers." UT="Length" UC="Geometry" />
+           <P N="cLoc" V="[12,240,480,720,1028]" D="Cross-Frame locations" UT="Length" UC="Geometry" />
+           <P N="g_gap" V="6" D="Gap between girders at piers" UT="Length" UC="Geometry" />
+       </O>
+       <O N="Deck" T="Group">
+           <P N="EndUserInputFields" V="1" />
+           <P N="ol" V="48" D="Overhang on left" />
+           <P N="or" V="48" D="Overhang on right" />
+       </O>
+       <O N="Settings" T="Group">
+           <P N="EndUserInputFields" V="1" />
+           <P N="refinement" V="120" D="FEA Refinement" />
+       </O>
+   </O>
+   <O N="Units" T="Group">
+       <O N="Internal" T="Unit" Length="INCH" Temperature="FAHRENHEIT" Angle="RADIANS" Force="KIPS" />
+       <O N="Geometry" T="Unit" Length="FEET" Temperature="FAHRENHEIT" Angle="RADIANS" Force="KIPS" />
+       <O N="Property" T="Unit" Length="INCH" Temperature="FAHRENHEIT" Angle="RADIANS" Force="KIPS" />
+   </O>
+   <O N="Materials" T="Group">
+       <O N="A709 36" T="Material" E="29000" Type="steel" Fu="58" Fy="36" a="0.0000065" d="0.000284" Nu="0.3" />
+       <O N="A709 50" T="Material" E="29000" Type="steel" Fu="65" Fy="50" a="0.0000065" d="0.000284" Nu="0.3" />
+       <O N="A709 50W" T="Material" E="29000" Type="steel" Fu="70" Fy="50" a="0.0000065" d="0.000284" Nu="0.3" />
+       <O N="A709 70W" T="Material" E="29000" Type="steel" Fu="90" Fy="70" a="0.0000065" d="0.000284" Nu="0.3" />
+       <O N="A615 60" T="Material" E="29000" Type="steel" Fu="90" Fy="60" a="0.0000065" d="0.000284" Nu="0.3" />
+       <O N="A615 75" T="Material" E="29000" Type="steel" Fu="100" Fy="75" a="0.0000065" d="0.000284" Nu="0.3" />
+       <O N="A706 60" T="Material" E="29000" Type="steel" Fu="80" Fy="60" a="0.0000065" d="0.000284" Nu="0.3" />
+       <O N="Concrete f'c 3 ksi" T="Material" E="3123.84" Type="concrete" a="0.000008" d="0.0000868" Nu="0.17" Fc28="3" />
+       <O N="Concrete f'c 4 ksi" T="Material" E="3607.1" Type="concrete" a="0.000008" d="0.0000868" Nu="0.17" Fc28="4" />
+   </O>
+   <O N="Alignments" T="Group">
+       <O N="BL119S_N" T="Alignment" Azimuth="PI/2" Station="72000">
+           <O T="Circular" Length="4465.68" Direction="Right" Radius="9168" />
+           <O T="Straight" Length="7234.32" />
+           <O T="ElevationPoint" Station="72000" Elevation="12385.68" Grade="0.0579" />
+           <O T="ElevationPoint" Station="77100" Elevation="12680.97" Grade="0.0579" />
+           <O T="ElevationPoint" Station="83700" Elevation="12813.54" Grade="-0.005" />
+           <O T="CrossSection" Station="73500" ElevationAtHCL="0" LeftEdgeToHCL="272.25">
+               <O T="CrossSectionSegment" Width="-0.09876543" Slope="20.25" />
+               <O T="CrossSectionSegment" Width="48" Slope="0.02" />
+               <O T="CrossSectionSegment" Width="24" Slope="-0.02" />
+               <O T="CrossSectionSegment" Width="180" Slope="-0.08" />
+               <O T="CrossSectionSegment" Width="144" Slope="-0.08" />
+               <O T="CrossSectionSegment" Width="20.25" Slope="0.09876543" />
+           </O>
+           <O T="CrossSection" Station="76465.68" ElevationAtHCL="0" LeftEdgeToHCL="272.25">
+               <O T="CrossSectionSegment" Width="-0.09876543" Slope="20.25" />
+               <O T="CrossSectionSegment" Width="48" Slope="0.02" />
+               <O T="CrossSectionSegment" Width="24" Slope="-0.02" />
+               <O T="CrossSectionSegment" Width="180" Slope="-0.08" />
+               <O T="CrossSectionSegment" Width="144" Slope="-0.08" />
+               <O T="CrossSectionSegment" Width="20.25" Slope="0.09876543" />
+           </O>
+           <O T="CrossSection" Station="77332.08" ElevationAtHCL="0" LeftEdgeToHCL="272.25">
+               <O T="CrossSectionSegment" Width="-0.09876543" Slope="20.25" />
+               <O T="CrossSectionSegment" Width="48" Slope="0.02" />
+               <O T="CrossSectionSegment" Width="24" Slope="-0.02" />
+               <O T="CrossSectionSegment" Width="180" Slope="-0.06" />
+               <O T="CrossSectionSegment" Width="144" Slope="-0.06" />
+               <O T="CrossSectionSegment" Width="20.25" Slope="0.09876543" />
+           </O>
+           <O T="CrossSection" Station="78198.48" ElevationAtHCL="0" LeftEdgeToHCL="272.25">
+               <O T="CrossSectionSegment" Width="-0.09876543" Slope="20.25" />
+               <O T="CrossSectionSegment" Width="48" Slope="0.02" />
+               <O T="CrossSectionSegment" Width="24" Slope="0.02" />
+               <O T="CrossSectionSegment" Width="180" Slope="-0.04" />
+               <O T="CrossSectionSegment" Width="144" Slope="-0.04" />
+               <O T="CrossSectionSegment" Width="20.25" Slope="0.09876543" />
+           </O>
+           <O T="CrossSection" Station="79064.76" ElevationAtHCL="0" LeftEdgeToHCL="272.25">
+               <O T="CrossSectionSegment" Width="-0.09876543" Slope="20.25" />
+               <O T="CrossSectionSegment" Width="48" Slope="0.04" />
+               <O T="CrossSectionSegment" Width="24" Slope="0.04" />
+               <O T="CrossSectionSegment" Width="180" Slope="-0.02" />
+               <O T="CrossSectionSegment" Width="144" Slope="-0.04" />
+               <O T="CrossSectionSegment" Width="20.25" Slope="0.09876543" />
+           </O>
+       </O>
+       <O N="Straight" T="Alignment" Azimuth="PI/2" Station="72000">
+           <O T="Straight" Length="11700" />
+           <O N="Begin" T="ElevationPoint" Station="72000" Elevation="12385.68" Grade="0" />
+           <O T="CrossSection" Station="73500" ElevationAtHCL="0" LeftEdgeToHCL="272.25">
+               <O T="CrossSectionSegment" Width="20.25" Slope="-0.09876543" />
+               <O T="CrossSectionSegment" Width="48" Slope="0.02" />
+               <O T="CrossSectionSegment" Width="24" Slope="-0.02" />
+               <O T="CrossSectionSegment" Width="180" Slope="-0.08" />
+               <O T="CrossSectionSegment" Width="144" Slope="-0.08" />
+               <O T="CrossSectionSegment" Width="20.25" Slope="0.09876543" />
+           </O>
+       </O>
+   </O>
+   <O N="3D" T="Group">
+       <O N="Girders" T="Group">
+           <O N="Span" T="Repeat" E="length(sLng)-1" S="1" I="1" CTRL="si" si="0">
+               <O N="Girder" T="Repeat" E="length(gLoc)-1" S="0" I="1" CTRL="gi" gi="0">
+                   <O N="Girder Cross-Section" T="Group">
+                       <P N="EndUserInputFields" V="1" />
+                       <P N="g_dw" V="66" D="Web depth of the I girder" UT="Length" UC="Property" />
+                       <P N="g_tw" V="0.6875" D="Web thickness of the I girder" UT="Length" UC="Property" />
+                       <P N="g_bft" V="18" D="Width of the top flange of the I girder" UT="Length" UC="Property" />
+                       <P N="g_tft" V="0.875" D="Thickness of the top flange of the I girder" UT="Length" UC="Property" />
+                       <P N="g_bfb" V="20" D="Width of the bottom flange of the I girder" UT="Length" UC="Property" />
+                       <P N="g_tfb" V="1" D="Thickness of the bottom flange of the I girder" UT="Length" UC="Property" />
+                   </O>
+                   <O N="G" T="akSteelGirder" Length="sLng[si]-sLng[si-1]" AlignT="None" AlignH="Warp" AlignV="Warp" X="sLng[si-1]+(si-1)*g_gap" Y="gLoc[gi]" Z="-12.5" tfb="g_tfb" bfb="g_bfb" tft="g_tft" bft="g_bft" tw="g_tw" dw="g_dw" />
+                   <O N="CrossFrames" T="Group">
+                       <O N="C" T="Repeat" E="length(cLoc)-1" S="0" I="1" CTRL="ci" ci="0">
+                           <P N="Guard" V="gi .GT. 0" />
+                           <O T="akCrossFrame" Station="cLoc[ci]" X="cLoc[ci]" Z="-12.5" Opacity="0.8" WebDepth="g_dw" GirderB_Horiz_Offset="gLoc[gi-1]" GirderA_Horiz_Offset="gLoc[gi]">
+                               <P N="TopWP_Vert_Offset" V="10" />
+                               <P N="TopWP_Horiz_Offset" V="0" />
+                               <P N="BotWP_Vert_Offset" V="7.5" />
+                               <P N="BotWP_Horiz_Offset" V="0" />
+                           </O>
+                           <O T="akVerticalStiffener" t="0.75" X="cLoc[ci]+t" Y="gLoc[gi-1]-w-g_tw/2" Z="-12.5" tw="0.5" w="8" h="66" clipV="2.5" clipH="1.5" AlignT="None" AlignH="Orient" AlignV="None" />
+                           <O T="akVerticalStiffener" t="0.75" X="cLoc[ci]+t" Y="gLoc[gi]+w+g_tw/2" Z="-12.5" tw="0.5" w="8" h="66" clipV="2.5" clipH="1.5" RZ="PI" AlignT="None" AlignH="Orient" AlignV="None" />
+                       </O>
+                   </O>
+               </O>
+           </O>
+       </O>
+       <O N="Deck" T="Group" AlignT="Warp" AlignH="Warp" AlignV="Warp">
+           <O N="DeckPour1" T="akDeck">
+               <P N="DeckWidth" V="ol+or+(gLoc[0]-gLoc[length(gLoc)-1])" />
+               <P N="MinDeck_t" V="8.5" />
+               <P N="TopDeckToTopGirderWeb" V="12.5" />
+               <P N="LeftDeck_t" V="10" />
+               <P N="RightDeck_t" V="10" />
+               <P N="LeftOverhangType" V="1" />
+               <P N="RightOverhangType" V="1" />
+               <P N="LeftEdge" V="272.25" />
+               <P N="GirderOffset" V="gLoc" />
+               <P N="HaunchWidth" V="[18, 16, 16, 22]" />
+               <P N="StartStation" V="sLng[0]" />
+               <P N="EndStation" V="BridgeLength" />
+           </O>
+       </O>
+       <O N="Bridge Rails" T="Group">
+           <O N="Barrier Right" T="akBarrier" AlignH="Warp" AlignV="Warp" Station="sLng[0]" Length="BridgeLength" Offset="144" type="RIGHT" />
+           <O N="Barrier Left" T="akBarrier" AlignH="Warp" AlignV="Warp" Station="sLng[0]" Length="BridgeLength" Offset="-252" type="LEFT" />
+       </O>
+   </O>
+</O>
